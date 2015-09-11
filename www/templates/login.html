@@ -1,21 +1,21 @@
 <ion-modal-view>
   <ion-header-bar>
-    <h1 class="title">Login</h1>
+    <h1 class="title logo-login"><img src="./img/logo2.png" class="image-logo-login"></h1>
   </ion-header-bar>
-  <ion-content>
+  <ion-content class="content-login">
     <form ng-submit="doLogin()">
       <div class="list">
         <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
+          <i class="icon ion-person placeholder-icon"></i>
+          <input type="text" placeholder="Username" ng-model="loginData.username">
         </label>
         <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
+          <i class="icon ion-locked placeholder-icon"></i>
+          <input type="password" placeholder="Password" ng-model="loginData.password">
         </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
+      </div>
+      <div class="padding">
+        <button class="button button-block button-positive" type="submit">Log in</button>
       </div>
     </form>
   </ion-content>

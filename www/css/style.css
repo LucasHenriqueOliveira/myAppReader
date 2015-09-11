@@ -1,3 +1,4 @@
+
 .bar-menu{
   height: 65px !important;
 }
@@ -5,6 +6,30 @@
 .logo-title{
   height: 60px !important;
   top: 5px !important;
+}
+
+.logo-login{
+  height: auto !important;;
+  top: 100% !important;
+}
+
+.item-floating-label .placeholder-icon {
+  padding-right: 18px;
+  position: absolute;
+  bottom: 9px;
+  left: 17px;
+}
+
+.item-floating-label {
+  padding-left: 40px !important;
+}
+
+.image-logo-login{
+  width: 70%;
+}
+
+.content-login{
+  top: 200px !important;
 }
 
 .content-menu{
