@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('myAppReader', ['ionic', 'starter.controllers'])
+  angular.module('myAppReader', ['ionic'])
 
   .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -22,50 +22,73 @@
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-      .state('app', {
+    .state('login', {
+        url: "/login",
+        templateUrl: "templates/login.html",
+        controller: 'LoginCtrl'
+      })
+
+
+    .state('app', {
       url: '/app',
-      abstract: true,
       templateUrl: 'templates/menu.html',
       controller: 'AppCtrl'
     })
+
 
     .state('app.search', {
       url: '/search',
       views: {
         'menuContent': {
-          templateUrl: 'templates/search.html'
+          templateUrl: 'templates/search.html',
+          controller: 'SearchCtrl'
         }
       }
     })
 
-    .state('app.browse', {
-        url: '/browse',
+
+    .state('app.register', {
+        url: '/register',
         views: {
           'menuContent': {
-            templateUrl: 'templates/browse.html'
-          }
-        }
-      })
-      .state('app.playlists', {
-        url: '/playlists',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/playlists.html',
-            controller: 'PlaylistsCtrl'
+            templateUrl: 'templates/register.html',
+            controller: 'RegisterCtrl'
           }
         }
       })
 
-    .state('app.single', {
-      url: '/playlists/:playlistId',
+
+      .state('app.history', {
+        url: '/history',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/history.html',
+            controller: 'HistoryCtrl'
+          }
+        }
+      })
+
+
+      .state('app.read', {
+        url: '/read',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/read.html',
+            controller: 'ReadCtrl'
+          }
+        }
+      })
+
+    .state('app.user', {
+      url: '/user/:userId',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlist.html',
-          controller: 'PlaylistCtrl'
+          templateUrl: 'templates/user.html',
+          controller: 'UserCtrl'
         }
       }
     });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/playlists');
+    $urlRouterProvider.otherwise('/login');
   });
 })();

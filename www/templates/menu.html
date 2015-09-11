@@ -13,22 +13,28 @@
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
-    <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
+    <ion-header-bar class="bar-stable bar-menu">
+      <h1 class="title logo-title"><img src="./img/logo.png"></h1>
     </ion-header-bar>
-    <ion-content>
+    <ion-content class="content-menu">
       <ion-list>
         <ion-item menu-close ng-click="login()">
-          Login
+          <i class="icon ion-qr-scanner icon-menu"></i>Read QR Code
+        </ion-item>
+        <ion-item menu-close href="#/app/register">
+          <i class="icon ion-compose icon-menu"></i>Register a order
         </ion-item>
         <ion-item menu-close href="#/app/search">
-          Search
+          <i class="icon ion-search icon-menu"></i>Search a order
         </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
+        <ion-item menu-close href="#/app/history">
+          <i class="icon ion-folder icon-menu"></i>Order history
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
+        <ion-item menu-close href="#/app/user/1">
+          <i class="icon ion-person icon-menu"></i>User account
+        </ion-item>
+        <ion-item menu-close ng-click="logout()">
+          <i class="icon ion-power icon-menu"></i>Logout
         </ion-item>
       </ion-list>
     </ion-content>

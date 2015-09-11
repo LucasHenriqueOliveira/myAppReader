@@ -1,1 +1,19 @@
-/* Empty. Add your own CSS if you like */
+.bar-menu{
+  height: 65px !important;
+}
+
+.logo-title{
+  height: 60px !important;
+  top: 5px !important;
+}
+
+.content-menu{
+  top: 65px !important;
+}
+
+.icon-menu{
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+
