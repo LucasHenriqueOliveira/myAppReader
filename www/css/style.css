@@ -25,6 +25,15 @@
   left: 17px;
 }
 
+.input-text{
+  height: 55px !important;
+}
+
+.button-snack4me{
+  border-color: #363843 !important;
+  background-color: #414453 !important;
+}
+
 .item-floating-label {
   padding-left: 40px !important;
 }
