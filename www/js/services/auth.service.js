@@ -22,7 +22,7 @@
 
     return {
       login: function(user) {
-        var urlPost = "http://www.snack4me.com/global/customer.php";
+        var urlPost = "http://url";
         var formData = { email: user.email, password: user.password };
         formData = mergeDeviceInfo(formData);
         var params = snack4meLib.toQueryString(formData);
