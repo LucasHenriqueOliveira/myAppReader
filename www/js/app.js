@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('myAppReader', ['ionic'])
+  angular.module('myAppReader', ['ionic', 'ngCordova'])
 
   .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {

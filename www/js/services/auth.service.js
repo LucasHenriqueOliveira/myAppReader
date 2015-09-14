@@ -5,9 +5,21 @@
     .module('myAppReader')
     .factory('AuthService', AuthService);
 
-  AuthService.$inject = ['$localstorage', '$location', '$http'];
+  AuthService.$inject = ['$localstorage', '$location', '$http', '$cordovaDevice'];
 
-  function AuthService($localstorage, $location, $http) {
+  function AuthService($localstorage, $location, $http, $cordovaDevice) {
+
+    var mergeDeviceInfo = function(formData) {
+      formData['device']   = $cordovaDevice.getDevice();
+      formData['cordova']  = $cordovaDevice.getCordova();
+      formData['model']    = $cordovaDevice.getModel();
+      formData['platform'] = $cordovaDevice.getPlatform();
+      formData['uuid']     = $cordovaDevice.getUUID();
+      formData['version']  = $cordovaDevice.getVersion();
+
+      return formData;
+    };
+
     return {
       login: function(user) {
         var urlPost = "http://www.snack4me.com/global/customer.php";
