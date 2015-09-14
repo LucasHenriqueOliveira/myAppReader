@@ -45,11 +45,11 @@
       },
 
       getToken: function() {
-        return $localStorage.get('authToken');
+        return $localstorage.get('authToken');
       },
 
       getUUID: function() {
-        return $localStorage.get('uuid');
+        return $localstorage.get('uuid');
       },
 
       getUserName: function() {
